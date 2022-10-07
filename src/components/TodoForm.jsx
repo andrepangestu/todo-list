@@ -3,9 +3,6 @@ import Store from "../context";
 
 export default function TodoForm() {
   const { dispatch } = useContext(Store);
-
-  // Creating a local state to have currently writing
-  // todo item that will be sent to the global store.
   const [todo, setTodo] = useState("");
 
   function handleTodoChange(e) {

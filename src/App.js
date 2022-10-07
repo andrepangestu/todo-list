@@ -1,5 +1,4 @@
 import React, { useContext, useReducer } from "react";
-// import ReactDOM from "react-dom";
 
 import Store from "./context";
 import reducer from "./reducer";
@@ -12,7 +11,6 @@ import TodoForm from "./components/TodoForm";
 function App() {
   const globalStore = usePersistedContext(useContext(Store), "state");
 
-  // `todos` will be a state manager to manage state.
   const [state, dispatch] = usePersistedReducer(
     useReducer(reducer, globalStore),
     "state" // The localStorage key
